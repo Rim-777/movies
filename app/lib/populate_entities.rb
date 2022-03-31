@@ -6,10 +6,10 @@ module PopulateEntities
   def call
     file_path = Rails.root.join('lib', 'storage', 'movies.csv')
     content = File.read(file_path)
-    MoviesImport.new(content).call
+    Movies::Import.new(content).call
 
     file_path = Rails.root.join('lib', 'storage', 'reviews.csv')
     content = File.read(file_path)
-    ReviewsImport.new(content).call
+    Reviews::Import.new(content).call
   end
 end

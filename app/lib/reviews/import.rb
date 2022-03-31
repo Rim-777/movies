@@ -2,7 +2,7 @@
 
 require 'csv'
 
-class ReviewsImport
+class Reviews::Import
   def initialize(content)
     @content = content
   end

@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Api::V1::MoviesController, type: :request do
+RSpec.describe Api::V1::ActorsController, type: :request do
   let(:response_body) { JSON.parse(response.body, symbolize_names: true) }
 
   let(:headers) do
@@ -23,7 +23,7 @@ RSpec.describe Api::V1::MoviesController, type: :request do
       end
 
       let(:json_schema) { Actors::SCHEMA }
-      let(:items_number) {5}
+      let(:items_number) { 5 }
 
       it_behaves_like 'successful_response_body'
     end
