@@ -39,7 +39,7 @@ class MoviesImport
 
   def set_movie!(name, description, year)
     Movie.find_by(name: name, year: year) ||
-    Movie.create!(name: name, description: description, year: year)
+      Movie.create!(name: name, description: description, year: year)
   end
 
   def add_director!(movie, director_name)

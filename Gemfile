@@ -14,6 +14,7 @@ gem 'api-versions', '~> 1.2', '>= 1.2.1'
 gem 'bootsnap', require: false
 gem 'dry-validation', '~> 1.8'
 gem 'fast_jsonapi', '~> 1.1', '>= 1.1.1'
+gem 'json-schema'
 gem 'kaminari', '~> 0.16.3'
 gem 'puma', '~> 5.0'
 gem 'rack-cors'
