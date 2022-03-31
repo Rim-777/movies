@@ -2,13 +2,13 @@
 
 require 'rails_helper'
 
-describe MoviesImport do
+describe Movies::Import do
   let(:content) do
     file_path = Rails.root.join('lib', 'storage', 'movies.csv')
     File.read(file_path)
   end
 
-  let(:subject) { MoviesImport.new(content) }
+  let(:subject) { described_class.new(content) }
 
   def subject_call
     subject.call

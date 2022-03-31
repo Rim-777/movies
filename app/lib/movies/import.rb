@@ -2,7 +2,7 @@
 
 require 'csv'
 
-class MoviesImport
+class Movies::Import
   def initialize(content)
     @content = content
   end

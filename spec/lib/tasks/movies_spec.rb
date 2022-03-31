@@ -26,21 +26,21 @@ describe 'movies' do
   end
 
   it 'initialise MoviesImport with expected arguments' do
-    expect(MoviesImport).to receive(:new).with(movies_content).and_call_original
+    expect(Movies::Import).to receive(:new).with(movies_content).and_call_original
     run_migration
   end
 
   it 'initialise ReviewsImport with expected arguments' do
-    expect(ReviewsImport).to receive(:new).with(reviews_content).and_call_original
+    expect(Reviews::Import).to receive(:new).with(reviews_content).and_call_original
     run_migration
   end
 
-  let(:movies_import_instance) { MoviesImport.new(movies_content) }
-  let(:reviews_import_instance) { MoviesImport.new(reviews_content) }
+  let(:movies_import_instance) { Movies::Import.new(movies_content) }
+  let(:reviews_import_instance) { Movies::Import.new(reviews_content) }
 
   it 'performs import' do
-    allow(MoviesImport).to receive(:new).and_return(movies_import_instance)
-    allow(ReviewsImport).to receive(:new).and_return(reviews_import_instance)
+    allow(Movies::Import).to receive(:new).and_return(movies_import_instance)
+    allow(Reviews::Import).to receive(:new).and_return(reviews_import_instance)
     expect(movies_import_instance).to receive(:call)
     expect(reviews_import_instance).to receive(:call)
     run_migration

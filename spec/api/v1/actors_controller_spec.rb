@@ -23,7 +23,7 @@ RSpec.describe Api::V1::MoviesController, type: :request do
       end
 
       let(:json_schema) { Actors::SCHEMA }
-      let(:items_number) {5}
+      let(:items_number) { 5 }
 
       it_behaves_like 'successful_response_body'
     end

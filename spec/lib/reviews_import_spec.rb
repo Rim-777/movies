@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe ReviewsImport do
+describe Reviews::Import do
   let!(:gone_in_60_seconds) do
     create(
       :movie,
@@ -26,7 +26,7 @@ describe ReviewsImport do
     File.read(file_path)
   end
 
-  let(:subject) { ReviewsImport.new(content) }
+  let(:subject) { Reviews::Import.new(content) }
 
   def subject_call
     subject.call
